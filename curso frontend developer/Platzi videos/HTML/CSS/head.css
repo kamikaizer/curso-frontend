@@ -1,0 +1,105 @@
+<style>
+  body {
+    background-color: #8E57ED;
+    margin: 0px;
+    font-family: 'Muli', sans-serif;
+  }
+  .header {
+    background-color: #8E57ED;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__img {
+    width: 200px;
+    margin: 10px;
+    margin-left: 5px;
+  }
+  .header__menu {
+    margin-right: 60px;
+    margin-top: 10px;
+  }
+  .header__menu ul {
+    display: none; /*display none, para no mostrar contenido*/
+    list-style: none; /*list-style: none para quitar simbolos de lista*/
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -14px;
+  }
+  .header__menu:hover ul, ul:hover { /* hover ul para desplegar lista no visible por el displaynoe*/
+    display: block;
+  }
+  .header__menu li {
+    margin: 10px 0px;
+  }
+  .header__menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  .header__menu li a:hover { /* a:hover va junto osino no realiza modificacion */
+    text-decoration: underline;
+  }
+  .header__menu--profile{
+    display: flex;
+    margin-left: 2px;
+    width: 40px;
+  }
+  .header__menu--profile p {
+    margin: 0px;
+    color: white;
+    margin-top: 15px;
+    margin-left: 3px;
+    align-items: center;
+  }
+  .header__menu--profile {
+    margin-right: 8px;
+    width: 40px;
+  }
+  .main {
+    height: 300px;
+  }
+  .main__title {
+    color: white;
+    font-size: 25px;
+  }
+  .input {
+    font-family: 'Muli', sans-serif;
+    background-color: rgba(255, 255, 255, 0.1);/*opasidad del item (barra de busqueda en este caso)*/
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    padding: 0px 20px;
+    width: 70%;
+    outline: none; /*elimina los margenes al seleccionar la barra de busqueda*/
+  }
+  ::placeholder { /*agregarle color al texto dentro de la barra de buscador*/
+    color: white;
+  }
+</style>
+<body>
+  <header class="header">
+    <img class="header__img" src="file:///Users/k3tsub4n/Desktop/curso_frontend_developer/logo-platzi-video-BW2.png" alt="Logo Platzi">
+    <div class="header__menu">
+      <div class="header__menu--profile">
+        <img src="file:///Users/k3tsub4n/Desktop/curso_frontend_developer/user-icon.png" alt="Users">
+        <p>Perfil</p>
+      </div>
+      <ul>
+        <li><a href="/">Cuenta</a></li>
+        <li><a href="/">Cerrar sesion</a></li>
+      </ul>
+    </div>
+  </header>
+  <center>
+  <section class="main">
+    <h2 class="main__title">¿Que quieres ver hoy?</h2>
+    <input class="input" type="Text" placeholder="Buscar...">
+  </center>
+  </section>
+</body>

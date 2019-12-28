@@ -1,0 +1,120 @@
+body {
+  background-color: #6ECFA8;
+  margin: 0px;
+  font-family: 'Muli', sans-serif;
+}
+.header {
+  align-items: center;
+  background-color: #6ECFA8;
+  color: white;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  top: 0px;
+  width: 100%;
+}
+.header__img {
+  width: 200px;
+  margin-left: 30px;
+  width: 200px;
+}
+.header__menu {
+  margin-right: 60px;
+  margin-top: 10px;
+}
+.header__menu ul {
+  display: none; /*display none, para no mostrar contenido*/
+  list-style: none; /*list-style: none para quitar simbolos de lista*/
+  padding: 0px;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+  margin: 0px 0px 0px -14px;
+}
+.header__menu:hover ul, ul:hover { /* hover ul para desplegar lista no visible por el displaynoe*/
+  display: block;
+}
+.header__menu li {
+  margin: 10px 0px;
+}
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+.header__menu li a:hover { /* a:hover va junto osino no realiza modificacion */
+  text-decoration: underline;
+}
+.header__menu--profile{
+  display: flex;
+  margin-left: 2px;
+  width: 40px;
+}
+.header__menu--profile p {
+  margin: 0px;
+  color: white;
+  margin-top: 15px;
+  margin-left: 3px;
+  align-items: center;
+}
+.header__menu--profile {
+  margin-right: 8px;
+  width: 40px;
+}
+.main {
+  height: 300px;
+}
+.main__title {
+  color: white;
+  font-size: 25px
+}
+.Categories__titte {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  padding-left: 30px;
+  width: 100px;
+}
+.input {
+  font-family: 'Muli', sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);/*opasidad del item (barra de busqueda en este caso)*/
+  border: 2px solid white;
+  border-radius: 40px;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  padding: 0px 20px;
+  width: 70%;
+  outline: none; /*elimina los margenes al seleccionar la barra de busqueda*/
+}
+::placeholder { /*agregarle color al texto dentro de la barra de buscador*/
+  color: white;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: #6ECFA8;
+}
+.footer a{
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  padding-left: 30px;
+  text-decoration: none;
+}
+.footer a:hover{
+  text-decoration: underline;
+}
+@media only screen and (max-width: 500px) {
+  .header__menu {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    width: 300px;
+  }
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
